@@ -1,7 +1,7 @@
 FROM ubuntu AS IMG
 RUN apt update && apt install maven git -y
 RUN git clone https://github.com/Ramithaaa/onlinebookstoree.git
-RUN cd onlinebookstoree && mvn install
+RUN cd onlinebookstoree && mvn clean install
 
 
 

@@ -10,6 +10,8 @@ services:
       - ./db.sql:/docker-entrypoint-initdb.d/db.sql
 
   app:
+    depends_on:
+    - mysql
     build: .
     ports:
       - "8080:8080"
